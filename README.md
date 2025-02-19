@@ -1,1 +1,1 @@
-# vecbench-dashboard-test
+dashboard-test
