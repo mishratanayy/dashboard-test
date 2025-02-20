@@ -3,57 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Overview</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 20px;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        .dashboard-section {
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            padding: 15px;
-            border-radius: 5px;
-        }
-        .feature-list {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-    </style>
+    <title>Vector Search Benchmark Dashboard Summary</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Vector Search Benchmark Dashboard Summary</h1>
 
-    <h1>Welcome to the Dashboard!</h1>
+    <div class="summary-container">
+        <div class="filter-section">
+            <h2 class="section-title">Filtering Capabilities</h2>
+            <p>The dashboard provides robust filtering capabilities to analyze benchmark results effectively. Users can refine their view based on specific criteria:</p>
 
-    <p>This dashboard provides you with a comprehensive overview of key metrics and data visualizations. It's designed to help you monitor performance, identify trends, and make informed decisions.</p>
+            <div class="filter-item">
+                <span class="filter-label">Date Range:</span>
+                <p>Allowing the user to select a start and end date. This enables time-based analysis and trend identification. Users can analyze performance over specific periods, such as daily, weekly, or monthly comparisons.</p>
+            </div>
 
-    <div class="dashboard-section">
-        <h2>Key Features</h2>
-        <ul class="feature-list">
-            <li>Real-time Data Updates: Stay informed with up-to-the-minute data.</li>
-            <li>Interactive Charts and Graphs: Visualize data with dynamic charts.</li>
-            <li>Customizable Reports: Generate reports tailored to your needs.</li>
-            <li>User-Friendly Interface: Easy navigation and intuitive design.</li>
-            <li>Data Export: Download data in various formats (CSV, Excel).</li>
-            <li>Alerts and Notifications: Receive timely updates on critical events.</li>
-        </ul>
+            <div class="filter-item">
+                <span class="filter-label">Run ID:</span>
+                <p>Filter results based on specific Run IDs, which represent unique identifiers for each benchmark run. This allows for isolating and comparing the performance of individual runs. Users can analyze specific runs in detail or compare different runs to understand the impact of configuration changes or other factors.</p>
+            </div>
+
+            <div class="filter-item">
+                <span class="filter-label">Index Type:</span>
+                <p>Filter by the type of vector index used (e.g., HNSW, IVF, etc.). This allows for a direct comparison of different indexing algorithms and their performance characteristics. Users can assess which index type is most suitable for their specific data and query patterns. It also allows for isolation of tests that utilize specific index parameters.</p>
+            </div>
+        </div>
+
+        <div class="data-section">
+            <h2 class="section-title">Key Performance Indicators (KPIs) and Charts</h2>
+            <p>The dashboard currently visualizes key performance indicators through a single image containing four primary charts:</p>
+
+            <div class="chart-container">
+                <p>This image displays the following metrics: QPS (Queries Per Second), Latency p50 (50th Percentile Latency), Latency p95 (95th Percentile Latency), and Index Build Time.</p>
+                <iframe width="1200" height="1000" src="https://lookerstudio.google.com/embed/reporting/aa12e1e1-9c45-4208-8aa8-39d53759988e/page/DYHcE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+            </div>
+
+            <p>These charts, combined with the filtering options, allow users to analyze performance trends, identify bottlenecks, and optimize their vector search configurations effectively. The filtering allows the user to view the charts based on date range, Run ID, and index type.</p>
+        </div>
     </div>
-
-    <div class="dashboard-section">
-        <h2>Sections Overview</h2>
-        <p>The dashboard is organized into the following sections:</p>
-        <ul>
-            <li><strong>Performance Summary:</strong> Displays key performance indicators (KPIs) at a glance.</li>
-            <li><strong>Sales Analytics:</strong> Provides insights into sales trends, revenue, and customer behavior.</li>
-            <li><strong>User Activity:</strong> Tracks user engagement and behavior within the application.</li>
-            <li><strong>System Monitoring:</strong> Monitors system health and performance.</li>
-            <li><strong>Reports:</strong> Allows you to generate and download custom reports.</li>
-        </ul>
-    </div>
-
-    <iframe width="1000" height="800" src="https://lookerstudio.google.com/embed/reporting/aa12e1e1-9c45-4208-8aa8-39d53759988e/page/DYHcE" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
 </body>
 </html>
